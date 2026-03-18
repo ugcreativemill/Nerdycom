@@ -105,14 +105,14 @@ function ContactPage() {
               <h3 className="font-display text-2xl font-semibold text-white">Direct Contact</h3>
               <div className="mt-8 space-y-5">
                 <a
-                  href="tel:+254700123456"
+                  href="tel:+256771495252"
                   className="flex items-center gap-4 rounded-[1.25rem] border border-white/10 bg-black/20 p-4 text-white transition hover:border-brand/40"
                 >
                   <PhoneCall className="text-brand" />
-                  <span>+254 700 123 456</span>
+                  <span>+256 771 495 252</span>
                 </a>
                 <a
-                  href="https://wa.me/254700123456"
+                  href="https://wa.me/256771495252"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 rounded-[1.25rem] border border-white/10 bg-black/20 p-4 text-white transition hover:border-brand/40"
@@ -122,7 +122,7 @@ function ContactPage() {
                 </a>
                 <div className="flex items-center gap-4 rounded-[1.25rem] border border-white/10 bg-black/20 p-4 text-white">
                   <MapPin className="text-brand" />
-                  <span>Nairobi, Kenya</span>
+                  <span>Kabaka Kintu House, Kampala, Uganda</span>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ function ContactPage() {
             <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-panel">
               <iframe
                 title="Nerdycom location"
-                src="https://www.google.com/maps?q=Nairobi%2C%20Kenya&z=12&output=embed"
+                src="https://www.google.com/maps?q=Kabaka%20Kintu%20House%2C%20Kampala%2C%20Uganda&z=16&output=embed"
                 className="h-[360px] w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

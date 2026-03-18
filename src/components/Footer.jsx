@@ -39,7 +39,8 @@ function Footer() {
           <div className="space-y-3">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60">Contact</p>
             <div className="space-y-2 text-sm text-muted">
-              <a href="tel:+254700123456">+254 700 123 456</a>
+              <a href="tel:+256771495252">+256 771 495 252</a>
+              <p>Kabaka Kintu House, Kampala</p>
               <a href="mailto:hello@nerdycom.co.ke" className="flex items-center gap-2">
                 <Mail size={16} />
                 hello@nerdycom.co.ke
