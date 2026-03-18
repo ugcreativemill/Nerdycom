@@ -286,14 +286,30 @@ function HomePage() {
             description="We focus on shipping the right solution fast, keeping systems dependable, and staying responsive when your business needs support."
           />
           <div className="grid gap-5 md:grid-cols-2">
-            {whyChooseUs.map((item) => (
-              <div
+            {whyChooseUs.map((item, index) => (
+              <motion.div
                 key={item}
-                className="flex items-center gap-4 rounded-[1.5rem] border border-white/10 bg-panelSoft p-5"
+                whileHover={{ y: -8, scale: 1.015 }}
+                transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+                className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-panelSoft p-5"
               >
-                <CheckCircle2 className="text-brand" />
-                <p className="text-lg text-white">{item}</p>
-              </div>
+                <motion.div
+                  animate={{ x: ['-120%', '180%'] }}
+                  transition={{ duration: 3.4 + index * 0.25, repeat: Infinity, ease: 'linear' }}
+                  className="pointer-events-none absolute inset-y-0 w-20 bg-gradient-to-r from-transparent via-brand/10 to-transparent"
+                />
+                <div className="relative flex items-center gap-4">
+                  <motion.div
+                    animate={{ y: [0, -4, 0], rotate: [0, 6, 0] }}
+                    transition={{ duration: 2.8 + index * 0.2, repeat: Infinity, ease: 'easeInOut' }}
+                    className="relative"
+                  >
+                    <div className="absolute inset-0 rounded-full bg-brand/20 blur-md" />
+                    <CheckCircle2 className="relative text-brand" />
+                  </motion.div>
+                  <p className="text-lg text-white transition duration-300 group-hover:text-brandSoft">{item}</p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
