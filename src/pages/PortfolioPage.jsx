@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 import PageHero from '../components/PageHero';
@@ -63,10 +65,30 @@ function PortfolioPage() {
           </div>
           <div className="grid gap-4">
             {designProcess.map((item, index) => (
-              <div key={item} className="rounded-[1.4rem] border border-white/10 bg-white/[0.03] p-5">
-                <p className="text-sm uppercase tracking-[0.24em] text-brand">Step 0{index + 1}</p>
-                <p className="mt-3 text-lg leading-8 text-white/85">{item}</p>
-              </div>
+              <motion.div
+                key={item}
+                whileHover={{ y: -8, scale: 1.01 }}
+                transition={{ type: 'spring', stiffness: 220, damping: 18 }}
+                className="group relative overflow-hidden rounded-[1.4rem] border border-white/10 bg-white/[0.03] p-5"
+              >
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,106,0,0.16),transparent_38%)] opacity-0 transition duration-300 group-hover:opacity-100" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1 bg-brand/80 opacity-0 transition duration-300 group-hover:opacity-100" />
+                <div className="relative flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.24em] text-brand">Step 0{index + 1}</p>
+                    <p className="mt-3 text-lg leading-8 text-white/85 transition duration-300 group-hover:text-white">
+                      {item}
+                    </p>
+                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, x: -8 }}
+                    whileHover={{ opacity: 1, x: 0 }}
+                    className="mt-1 text-brand"
+                  >
+                    <ArrowUpRight size={20} />
+                  </motion.div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
