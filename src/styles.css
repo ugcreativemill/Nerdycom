@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 11 11 11;
+  --panel: 17 17 17;
+  --panel-soft: 23 23 23;
+  --brand: 255 106 0;
+  --brand-soft: 255 143 58;
+  --ink: 245 245 245;
+  --muted: 163 163 163;
+  color-scheme: dark;
+}
+
+.theme-light {
+  --surface: 247 244 239;
+  --panel: 255 255 255;
+  --panel-soft: 240 234 227;
+  --ink: 22 22 22;
+  --muted: 99 99 99;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: rgb(var(--surface));
+  color: rgb(var(--ink));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(255, 106, 0, 0.3);
+  color: #fff;
+}
+
+.theme-light [class*='text-white'] {
+  color: rgb(var(--ink)) !important;
+}
+
+.theme-light [class*='bg-black/'] {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.theme-light [class*='bg-white/[0.03]'],
+.theme-light [class*='bg-white/[0.05]'],
+.theme-light [class*='bg-white/[0.06]'],
+.theme-light [class*='bg-white/[0.08]'] {
+  background-color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.theme-light [class*='border-white/'] {
+  border-color: rgba(17, 17, 17, 0.1) !important;
+}
+
+.theme-light .bg-grid {
+  opacity: 0.08 !important;
+}
