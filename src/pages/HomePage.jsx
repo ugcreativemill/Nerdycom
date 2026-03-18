@@ -26,12 +26,20 @@ function HomePage() {
             className="space-y-8"
           >
             <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-brand">
+              <motion.span
+                animate={{ y: [0, -4, 0] }}
+                transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
+                className="inline-flex rounded-full border border-brand/30 bg-brand/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-brand"
+              >
                 Future-ready IT partner
-              </span>
-              <span className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/65">
+              </motion.span>
+              <motion.span
+                animate={{ y: [0, 4, 0] }}
+                transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}
+                className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs uppercase tracking-[0.3em] text-white/65"
+              >
                 Hardware . Software . Support
-              </span>
+              </motion.span>
             </div>
             <div className="space-y-6">
               <h1 className="font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
@@ -97,13 +105,14 @@ function HomePage() {
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {stats.map((stat) => (
-                <div
+                <motion.div
                   key={stat.label}
+                  whileHover={{ y: -4 }}
                   className="rounded-[1.5rem] border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-5 backdrop-blur-sm"
                 >
                   <p className="font-display text-3xl font-semibold text-white">{stat.value}</p>
                   <p className="mt-2 text-sm text-muted">{stat.label}</p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -214,15 +223,17 @@ function HomePage() {
               The main site handles your brand, services, and custom systems. The WordPress shop handles the products. We connect both so customers move cleanly between them.
             </p>
           </div>
-          <a
+          <motion.a
             href={shopUrl}
             target="_blank"
             rel="noreferrer"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3.5 font-medium text-black transition hover:bg-brandSoft"
           >
             Open Shop
             <ShoppingBag size={18} />
-          </a>
+          </motion.a>
         </div>
       </AnimatedSection>
 
@@ -304,7 +315,11 @@ function HomePage() {
       </AnimatedSection>
 
       <AnimatedSection className="px-6 pb-24 pt-20 lg:px-8" delay={0.2}>
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-brand/20 bg-gradient-to-r from-brand/20 via-brand/10 to-transparent p-8 lg:flex lg:items-center lg:justify-between lg:p-10">
+        <motion.div
+          animate={{ boxShadow: ['0 0 0 rgba(255,106,0,0)', '0 0 40px rgba(255,106,0,0.12)', '0 0 0 rgba(255,106,0,0)'] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+          className="mx-auto max-w-7xl rounded-[2rem] border border-brand/20 bg-gradient-to-r from-brand/20 via-brand/10 to-transparent p-8 lg:flex lg:items-center lg:justify-between lg:p-10"
+        >
           <div className="max-w-2xl space-y-4">
             <p className="text-sm uppercase tracking-[0.35em] text-brand">Let&apos;s Build</p>
             <h2 className="font-display text-3xl font-semibold text-white md:text-4xl">
@@ -317,7 +332,7 @@ function HomePage() {
           >
             Contact Us
           </Link>
-        </div>
+        </motion.div>
       </AnimatedSection>
     </>
   );

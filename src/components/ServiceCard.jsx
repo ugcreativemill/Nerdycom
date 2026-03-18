@@ -11,9 +11,20 @@ function ServiceCard({ service, index = 0 }) {
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="group rounded-[1.75rem] border border-white/10 bg-panel p-6 transition duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-glow"
     >
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-brand/30 bg-brand/10 text-brand">
+      <motion.div
+        animate={{ y: [0, -4, 0] }}
+        transition={{ duration: 3 + index * 0.3, repeat: Infinity, ease: 'easeInOut' }}
+        className="flex h-14 w-14 items-center justify-center rounded-2xl border border-brand/30 bg-brand/10 text-brand"
+      >
         <Icon size={28} />
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ width: 0 }}
+        whileInView={{ width: '4rem' }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.1 + index * 0.05 }}
+        className="mt-5 h-px bg-brand/50"
+      />
       <h3 className="mt-6 font-display text-2xl font-semibold text-white">{service.title}</h3>
       <p className="mt-4 text-sm leading-7 text-muted">{service.description}</p>
       {service.points && (

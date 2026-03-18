@@ -41,9 +41,9 @@ function Footer() {
             <div className="space-y-2 text-sm text-muted">
               <a href="tel:+256771495252">+256 771 495 252</a>
               <p>Kabaka Kintu House, Kampala</p>
-              <a href="mailto:hello@nerdycom.co.ke" className="flex items-center gap-2">
+              <a href="mailto:info@nerdycom.io" className="flex items-center gap-2">
                 <Mail size={16} />
-                hello@nerdycom.co.ke
+                info@nerdycom.io
               </a>
             </div>
           </div>
