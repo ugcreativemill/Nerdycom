@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { shopUrl } from '../data/siteData';
 import BrandLogo from './BrandLogo';
@@ -39,8 +39,14 @@ function Footer() {
           <div className="space-y-3">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-white/60">Contact</p>
             <div className="space-y-2 text-sm text-muted">
-              <a href="tel:+256771495252">+256 771 495 252</a>
-              <p>Kabaka Kintu House, Kampala</p>
+              <a href="tel:+256771495252" className="flex items-center gap-2">
+                <Phone size={16} />
+                +256 771 495 252
+              </a>
+              <p className="flex items-center gap-2">
+                <MapPin size={16} />
+                Kabaka Kintu House, Kampala
+              </p>
               <a href="mailto:info@nerdycom.io" className="flex items-center gap-2">
                 <Mail size={16} />
                 info@nerdycom.io
