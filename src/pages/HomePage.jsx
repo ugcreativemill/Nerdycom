@@ -88,7 +88,7 @@ function HomePage() {
                 </div>
                 <p className="mt-4 text-xl font-semibold text-white">Need laptops and business hardware?</p>
                 <p className="mt-2 text-sm leading-7 text-muted">
-                  Browse the WordPress shop for laptops, accessories, and office-ready devices.
+                  Browse the shop for laptops, accessories, and office-ready devices.
                 </p>
               </motion.a>
               <motion.div
@@ -220,7 +220,7 @@ function HomePage() {
               Looking for laptops, accessories, and ready-to-buy hardware?
             </h2>
             <p className="max-w-2xl text-lg leading-8 text-white/75">
-              The main site handles your brand, services, and custom systems. The WordPress shop handles the products. We connect both so customers move cleanly between them.
+              The main site handles your brand, services, and custom systems. The shop handles the products. We connect both so customers move cleanly between them.
             </p>
           </div>
           <motion.a
